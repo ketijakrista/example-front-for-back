@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PlannerComponent } from './components/planner/planner.component';
+import { FormsComponent } from './components/forms/forms.component';
 
 const routes: Routes = [
   {
@@ -11,7 +12,11 @@ const routes: Routes = [
   {
     path: 'planner',
     component: PlannerComponent
-  }
+  },
+  {
+    path: 'forms',
+    component: FormsComponent
+  },
 ];
 
 @NgModule({
