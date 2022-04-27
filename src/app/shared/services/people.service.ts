@@ -1,20 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
-import { BehaviorSubject, finalize, Observable, take, tap } from 'rxjs';
+import { Observable } from 'rxjs';
 import { PeopleApiResponse } from '../models/people.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PeopleService {
-  loading$ = new BehaviorSubject<boolean>(false);
-
   constructor(private http: HttpClient) {
-  }
-
-  getLoading(): Observable<boolean> {
-    return this.loading$.asObservable();
   }
 
   getPeople(page: number = 1): Observable<PeopleApiResponse> {
