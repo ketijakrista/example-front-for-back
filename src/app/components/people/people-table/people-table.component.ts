@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { PeopleApiResponse, Person } from '../../../shared/models/people.model';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -20,9 +20,6 @@ export class PeopleTableComponent {
 
   @Input()
   loading = false;
-
-  @Output()
-  pageChangeEvent = new EventEmitter<number>();
 
   people?: Person[];
   collectionSize = 0;
