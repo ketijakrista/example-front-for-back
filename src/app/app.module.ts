@@ -15,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { CharactersComponent } from './components/characters/characters.component';
 import { CharacterCardComponent } from './components/characters/character-card/character-card.component';
 import { CharacterComponent } from './components/characters/character/character.component';
+import { PeopleComponent } from './components/people/people.component';
+import { PeopleTableComponent } from './components/people/people-table/people-table.component';
+import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -28,14 +31,17 @@ import { CharacterComponent } from './components/characters/character/character.
     LoginFormComponent,
     CharactersComponent,
     CharacterCardComponent,
-    CharacterComponent
+    CharacterComponent,
+    PeopleComponent,
+    PeopleTableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
