@@ -21,7 +21,6 @@ export class PeopleComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
-      this.loading = true;
       const page = params['page'];
 
       if(page) {
