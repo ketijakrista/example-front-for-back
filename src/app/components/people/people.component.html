@@ -28,6 +28,5 @@
 <app-people-table
   [loading]="loading"
   [page]="page"
-  [peopleWithPagination]="peopleApiResponse$ | async"
-  (pageChangeEvent)="refreshPeople($event)">
+  [peopleWithPagination]="peopleApiResponse$ | async">
 </app-people-table>
